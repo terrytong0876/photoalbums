@@ -1,11 +1,11 @@
-var express 	= require('express');
-var router 		= express.Router();
-var model 		= require('./../lib/model/model-users');
+var express = require('express');
+var router = express.Router();
+var model = require('./../lib/model/model-users');
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  model.getAllUsers(function(err, obj){
-  	if(err){
+  model.getAllUsers(function(err, obj) {
+  	if (err) {
   		res.status(500).send({error: 'An unknown server error has occurred!'});
   	} else {
   		res.send(obj);
